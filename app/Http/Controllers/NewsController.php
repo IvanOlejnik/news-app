@@ -60,10 +60,10 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function edit(News $news)
-    {
-		//route('news.edit', $news->id) ?
-        return view('news.forms.edit');
+    public function edit(Request $request, News $news)
+    { 
+		$news = $request->news;
+        return view('news.forms.edit', ['news' => $news]);
     }
 
     /**
@@ -75,7 +75,8 @@ class NewsController extends Controller
      */
     public function update(Request $request, News $news)
     {
-        //
+        auth()->user()->news()->update($request->all());
+	    return redirect()->route('news.index');
     }
 
     /**

@@ -17,6 +17,7 @@
 									<i class="fa fa-btn fa-trash"></i>Удалить
 								</button>
 							</form>
+							<a href="{{ route('news.edit', $new->id) }}">Редактировать</a>
 							<hr>
 						</div>
 					@endforeach

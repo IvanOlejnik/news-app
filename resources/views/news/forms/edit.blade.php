@@ -9,7 +9,7 @@
 
                 <div class="panel-body">
                     <h1>Редактирование новости</h1>
-					{!! Form::open(['route' => 'news.store']) !!}
+					{!! Form::model(['route' => 'news.update ']) !!}
 					@include('news.forms._form')
 					{!! Form::close()!!}  
                 </div>
