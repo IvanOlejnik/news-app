@@ -24,7 +24,7 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-
+	    //$router->model('news', 'App\Model\News');
         parent::boot();
     }
 

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('news.index')
 
 @section('content')
 <div class="container">
@@ -8,8 +8,10 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
-					<a href="http://news-app/news">Новости</a>
+					<h1>Создание новости</h1>
+					{!! Form::open(['route' => 'news.store']) !!}
+					@include('news.forms._form')
+					{!! Form::close()!!}                  
                 </div>
             </div>
         </div>
